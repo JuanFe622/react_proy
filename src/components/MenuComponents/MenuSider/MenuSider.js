@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Layout, Menu } from "antd";
-import { HomeOutlined, UserOutlined } from "@ant-design/icons";
+import { HomeOutlined, UserOutlined, LoginOutlined } from "@ant-design/icons";
 import "./MenuSider.scss";
 
 export default function MenuSider(props) {
@@ -10,15 +10,21 @@ export default function MenuSider(props) {
     const navigate = useNavigate();
     const menuItems = [
         {
-            key: "/admin",
+            key: "/",
             icon: <HomeOutlined />,
             label: <span className="nav-text">Home</span>,
+        },
+        {
+            key: "/admin/login",
+            icon: <LoginOutlined />,
+            label: <span className="nav-text">Login</span>,
         },
         {
             key: "/admin/contact",
             icon: <UserOutlined />,
             label: <span className="nav-text">Contact</span>,
         },
+        
     ];
     const menuClick = (e) => {
         const path = e.key;
