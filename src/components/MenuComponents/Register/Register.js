@@ -63,6 +63,7 @@ export default function Register() {
                     value={inputs.govId} 
                 />
             </Form.Item>
+            <br></br>
             <Form.Item>
             <Input
                     prefix={

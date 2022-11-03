@@ -15,12 +15,12 @@ export default function MenuSider(props) {
             label: <span className="nav-text">Home</span>,
         },
         {
-            key: "/admin/login",
+            key: "/login",
             icon: <LoginOutlined />,
             label: <span className="nav-text">Login</span>,
         },
         {
-            key: "/admin/contact",
+            key: "/contact",
             icon: <UserOutlined />,
             label: <span className="nav-text">Contact</span>,
         },
