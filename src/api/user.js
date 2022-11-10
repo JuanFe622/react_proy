@@ -38,3 +38,28 @@ export async function signUpApi(data) {
         }
     });
 }
+
+export async function signIn(data) {
+    const url = `${basePath}/${apiVersion}/${modelName}/signup`;
+
+    const params = {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
+        },
+    };
+
+    return fetch(url, params)
+    .then((response) => {
+        return response.json();
+    })
+    .then((result) => {
+        console.log(result);
+        return result;
+    })
+    .catch((err) => {
+        return err.message;
+    });
+}

@@ -63,7 +63,6 @@ export default function RegisterForm() {
             notification["error"]({
                 message: "Todos los campos son obligatorios",
             });
-
         console.log("Vacíos");
         } else {
             if (passwordVal !== repeatPasswordVal) {
